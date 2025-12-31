@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Emogro — Concepts Hub</title>
+  <style>
+    :root{
+      --bg:#0b0f14; --card:#121a22; --text:#e8eef6; --muted:#9fb0c2;
+      --line:#203040; --a:#7dd3fc; --b:#a7f3d0; --c:#fda4af; --d:#fde68a;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --r:16px;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+    }
+    body{margin:0; background:linear-gradient(180deg,#070a0f, #0b0f14 35%, #06080c); color:var(--text);}
+    .wrap{max-width:980px; margin:0 auto; padding:16px;}
+    header{position:sticky; top:0; z-index:20; backdrop-filter: blur(10px);
+      background:rgba(11,15,20,.75); border-bottom:1px solid var(--line);}
+    header .wrap{display:flex; align-items:center; gap:12px; padding:12px 16px;}
+    .badge{padding:6px 10px; border:1px solid var(--line); border-radius:999px; color:var(--muted); font-size:12px;}
+    h1{font-size:18px; margin:0;}
+    nav{margin-left:auto; display:flex; gap:10px; flex-wrap:wrap;}
+    nav a{color:var(--a); text-decoration:none; font-size:13px; padding:6px 10px; border:1px solid var(--line); border-radius:999px;}
+    nav a:hover{border-color:#2e4a63;}
+    .grid{display:grid; gap:12px;}
+    @media(min-width:900px){ .grid{grid-template-columns:1.3fr .7fr;} }
+
+    .card{background:linear-gradient(180deg, rgba(18,26,34,.98), rgba(14,20,26,.98));
+      border:1px solid var(--line); border-radius:var(--r); box-shadow:var(--shadow); overflow:hidden;}
+    .card .hd{padding:14px 14px 10px; border-bottom:1px solid var(--line); display:flex; gap:10px; align-items:center;}
+    .dot{width:10px; height:10px; border-radius:999px; background:var(--a);}
+    .title{font-size:14px; font-weight:700; margin:0;}
+    .sub{font-size:12px; color:var(--muted); margin:2px 0 0;}
+    .body{padding:12px 14px 14px;}
+    .pillrow{display:flex; gap:8px; flex-wrap:wrap; margin:10px 0 0;}
+    .pill{font-size:12px; color:#cfe2f7; border:1px solid var(--line); border-radius:999px; padding:6px 10px;}
+    .k{color:var(--d)} .g{color:var(--b)} .r{color:var(--c)}
+    .list{margin:10px 0 0; padding:0; list-style:none;}
+    .list li{padding:8px 0; border-bottom:1px dashed rgba(32,48,64,.6);}
+    .list li:last-child{border-bottom:none;}
+    .label{font-weight:700;}
+    .muted{color:var(--muted);}
+    a{color:var(--a);}
+    a:visited{color:#b8a6ff;}
+    .links a{display:block; padding:10px 12px; border:1px solid var(--line); border-radius:12px; text-decoration:none; margin-top:8px;}
+    .links a:hover{border-color:#2e4a63;}
+    details{border:1px solid var(--line); border-radius:12px; padding:10px 12px; margin-top:10px;}
+    summary{cursor:pointer; font-weight:700;}
+    code, pre{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;}
+    pre{background:#0a1118; border:1px solid var(--line); padding:10px; border-radius:12px; overflow:auto; margin:10px 0 0;}
+    footer{padding:18px 16px; color:var(--muted); font-size:12px; text-align:center;}
+  </style>
+</head>
+
+<body>
+<header>
+  <div class="wrap">
+    <div class="badge">🧠 Emogro</div>
+    <h1>Concepts Hub</h1>
+    <nav>
+      <a href="#core">Core</a>
+      <a href="#grammar">Grammar</a>
+      <a href="#pipeline">Pipeline</a>
+      <a href="#links">Links</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap grid">
+
+  <!-- LEFT: MAIN -->
+  <section class="card" id="core">
+    <div class="hd">
+      <span class="dot" style="background:var(--d)"></span>
+      <div>
+        <p class="title">Core Concepts</p>
+        <p class="sub">State-first, spatial, auditable cognition.</p>
+      </div>
+    </div>
+
+    <div class="body">
+      <ul class="list">
+        <li><span class="label k">State Code</span> — A screenshot (or grid) that encodes <span class="muted">state + constraints + affordances</span>, sufficient to resume.</li>
+        <li><span class="label g">Spatial is the Interface</span> — Boxes, color, emptiness, and boundaries enforce rules without negotiation.</li>
+        <li><span class="label r">Impossible States</span> — Must never be rendered. If shown, the system is broken.</li>
+        <li><span class="label k">Learning = Loss</span> — Real learning removes future options (irreversible specialization).</li>
+        <li><span class="label g">Screenshot Ingestion</span> — Cross-model handoff via shared visual grammar (state transfer, not chat).</li>
+      </ul>
+
+      <details>
+        <summary>📌 Minimal “No-BS” Rule Set</summary>
+        <ul class="list">
+          <li><span class="label">Externalize state</span> first; narration is optional and can be banned.</li>
+          <li><span class="label">Blank cells</span> = unresolved possibility.</li>
+          <li><span class="label">Fixed cells</span> = committed state.</li>
+          <li><span class="label">Advantage implies cost</span> (disadvantage increases too).</li>
+        </ul>
+      </details>
+    </div>
+  </section>
+
+  <!-- RIGHT: SIDEBAR -->
+  <aside class="card" id="links">
+    <div class="hd">
+      <span class="dot" style="background:var(--a)"></span>
+      <div>
+        <p class="title">Clickable Links</p>
+        <p class="sub">Always-on resources (tap to open).</p>
+      </div>
+    </div>
+
+    <div class="body links">
+      <a href="https://www.ruled.me/keto-diet-food-list/" target="_blank" rel="noopener">🥑 Keto Food List (ruled.me)</a>
+      <a href="https://www.dietdoctor.com/low-carb/keto" target="_blank" rel="noopener">📘 Keto Beginner Guide (Diet Doctor)</a>
+      <a href="https://www.healthline.com/nutrition/keto-electrolytes" target="_blank" rel="noopener">⚡ Keto Electrolytes (Healthline)</a>
+
+      <details>
+        <summary>➕ Add your own links</summary>
+        <p class="muted">Edit the <code>&lt;a href="..."&gt;</code> lines in this file. Keep <code>target="_blank"</code> for opening in a new tab.</p>
+      </details>
+    </div>
+  </aside>
+
+  <!-- FULL WIDTH: GRAMMAR -->
+  <section class="card" id="grammar" style="grid-column:1 / -1;">
+    <div class="hd">
+      <span class="dot" style="background:var(--b)"></span>
+      <div>
+        <p class="title">Spatial Grammar (EGL → Pixels)</p
